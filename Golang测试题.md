@@ -18,7 +18,7 @@
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import (
@@ -107,7 +107,7 @@ panic: 触发异常
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import (
@@ -172,7 +172,7 @@ func defer_call() {
 
 下面代码会输出什么
 
-```
+```go
 package main
 import (
 	"fmt"
@@ -236,7 +236,7 @@ key=wang,value=&{wang 22}
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import (
@@ -294,7 +294,7 @@ func main() {
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import "fmt"
@@ -361,7 +361,7 @@ teacher showB
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import (
@@ -415,7 +415,7 @@ panic: hello
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import "fmt"
@@ -465,7 +465,7 @@ func main() {
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import "fmt"
@@ -602,7 +602,7 @@ fatal error: concurrent map read and map write
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import (
@@ -685,7 +685,7 @@ Done
 
 下面代码会输出什么
 
-```
+```go
 package main
 import (
 	"fmt"
@@ -757,7 +757,7 @@ young2 = YoungMan{} 这一行会编译不通过
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import "fmt"
@@ -801,7 +801,7 @@ panic: assignment to entry in nil map
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import (
@@ -852,7 +852,7 @@ people:  {}
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import "fmt"
@@ -896,7 +896,7 @@ fatal error: stack overflow
 
 下面代码会输出什么
 
-```
+```go
 package main
 
 import (
