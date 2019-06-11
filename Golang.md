@@ -4,7 +4,9 @@ A：使用os库的OS.Args，或者flag库。后者更加强大，有默认值，
 Q：Go中如何对结构体struct对象进行拷贝赋值？
 A：使用unsafe进行指针赋值（高效，但不安全）；使用反射赋值（安全，但很低速）；Json序列化后再反序列化（更慢，但很有想法）
 
-Q：以下代码会输出什么，为什么
+Q：以下代码会输出什么，为什么?
+
+```
 func main() {
     runtime.GOMAXPROCS(1)
     wg := sync.WaitGroup{}
@@ -25,6 +27,8 @@ func main() {
   }
   wg.Wait()
 }
+```
+
 A：会输出 5555501234
 因为第一个for循环，会极快的速度创建完5个go协程。此时i为5，所以输出的全是5。
 第二个 for 循环，则因为每次都会将 i 的值拷贝一份传给 goroutine，得到的 i 不同，输出也会不同。
@@ -42,11 +46,15 @@ Q：如何对不确定格式的json进行解析？例如：[]byte(`{"status":200
 A：使用 json.RawMessage 原生数据类型进行解析。 var result struct { Status     json.RawMessage `json:"status"` }
 
 Q：以下代码会输出什么？为什么？
+
+```
 func main() {
 	var i = 1
 	defer fmt.Println("result: ", func() int { return i * 2 }())
 	i = 2
 }
+```
+
 A：输出2。因为defer参数在声明时就会求出具体值并入栈，而非执行时才求值。
 
 Q：简述Golang的GC机制和其他GC相较的优缺点。
